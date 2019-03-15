@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+  background-color: aqua;
+}
+.flexExample {
+  display: flex;
+  background-color: blueviolet;
+}
+.header {
+  font-size: 2em;
+  font-weight: 900;
+  background-color: antiquewhite;
+}
+
+.item {
+  flex: 1;
+}
+
+.aItem {
+  /*flex: 2;*/
+  background-color: chartreuse;
+}
+.bItem {
+  /*flex: 1;*/
+  background-color: darkgoldenrod;
+}
+.cItem {
+  /*flex: 1;*/
+  background-color: fuchsia;
+}
+.dItem {
+  /*flex: 1;*/
+  background-color: mediumaquamarine;
+}
