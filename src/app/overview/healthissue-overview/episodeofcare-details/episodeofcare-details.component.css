@@ -1,0 +1,9 @@
+.element {
+  display: flex;
+  background-color: lightgray;
+  padding-left: 1em;
+}
+
+.element > div {
+  flex: 1;
+}

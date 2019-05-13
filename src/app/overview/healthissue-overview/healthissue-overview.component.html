@@ -1,0 +1,21 @@
+<div class="overview">
+  <div class="details">
+    <div class="header"></div>
+    <div *ngFor="let hi of healthIssues">
+      <app-healthissue-details [hi]="hi" (click)="toggleEoc()"></app-healthissue-details>
+      <div *ngIf="eocVisible">
+        <app-episodeofcare-details *ngFor="let episode of hi.episodeOfCare" [eoc]="episode"></app-episodeofcare-details>
+      </div>
+    </div>
+  </div>
+  <div class="timeline">
+    <lib-slider></lib-slider>
+    <div *ngFor="let hi of healthIssues">
+      <app-healthissue-details [hi]="hi" (click)="toggleEoc()"></app-healthissue-details>
+      <div *ngIf="eocVisible">
+        <app-episodeofcare-details *ngFor="let episode of hi.episodeOfCare" [eoc]="episode"></app-episodeofcare-details>
+      </div>
+    </div>
+
+  </div>
+</div>

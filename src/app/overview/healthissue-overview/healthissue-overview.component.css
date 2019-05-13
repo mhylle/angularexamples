@@ -1,0 +1,20 @@
+.header {
+  margin-top: 1rem
+}
+
+.overview {
+  display: flex;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.details {
+  height: 100%;
+  width: 300px;
+  box-shadow: 3px 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.timeline {
+  flex: 1;
+  height: 100%;
+}
