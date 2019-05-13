@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-health-issue-slider',
@@ -7,32 +6,33 @@ import {FormBuilder, FormGroup} from '@angular/forms';
   styleUrls: ['./health-issue-slider.component.css']
 })
 export class HealthIssueSliderComponent implements OnInit {
+  sliderRange: number[];
+  rangeConfig: any = {};
 
-  sliderRange = [40, 60];
+  @Input()
+  verticalSliders: boolean;
 
-  rangeConfig: any = {
-    behaviour: 'drag',
-    connect: true,
-    margin: 1,
-    limit: 100,
-    range: {
-      min: 0,
-      max: 100
-    },
-    pips: {
-      mode: 'drag',
-      density: 0.1
-    }
-  };
-
-  private form1: FormGroup;
-
-  constructor(private formBuilder: FormBuilder) {
-
+  constructor() {
+    this.sliderRange = [40, 60];
+    this.rangeConfig = {
+      behaviour: 'drag',
+      connect: true,
+      margin: 5,
+      limit: 100,
+      range: {
+        min: 0,
+        max: 100
+      }
+    };
   }
 
   ngOnInit() {
-    this.form1 = this.formBuilder.group({'single': [10]});
+
   }
+
+  onChange(value: any) {
+    console.log('Value changed to', value);
+  }
+
 
 }
