@@ -1,0 +1,10 @@
+<div>UI SLIDER</div>
+<div>
+  <nouislider [min]="0" [max]="100" [step]="0.5"  [config]="rangeConfig" style="margin: 0" [(ngModel)]="sliderRange"></nouislider>
+  <form [formGroup]="form1">
+<!--    <nouislider [config]="rangeConfig" [limit]="10" [(ngModel)]="sliderRange"></nouislider>-->
+    <div>Some Top Text</div>
+<!--    <nouislider [min]="0" [max]="100" [step]="0.5" [formControl]="form1.controls.single" style="margin: 0"></nouislider>-->
+    <div>Some Bottom Text</div>
+  </form>
+</div>
