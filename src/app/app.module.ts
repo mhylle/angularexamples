@@ -10,6 +10,7 @@ import { GridlayoutComponent } from './layout/gridlayout/gridlayout.component';
 import { HealthIssueSliderComponent } from './slider/health-issue-slider/health-issue-slider.component';
 import {NouisliderModule} from 'ng2-nouislider';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {SliderModule} from '@mhylle/slider';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     HttpClientModule,
     NouisliderModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
