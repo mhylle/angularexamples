@@ -1,8 +1,2 @@
-<div>UI SLIDER</div>
-<div>
-  <nouislider [min]="0" [max]="100" [step]="1" [config]="rangeConfig" [(ngModel)]="sliderRange"
-              (ngModelChange)="onChange($event)"></nouislider>
-  <div>{{sliderRange[0]}}</div>
-  <div>{{sliderRange[1]}}</div>
-
-</div>
+<nouislider [min]="0" [max]="100" [step]="1" [config]="rangeConfig" [(ngModel)]="sliderRange"
+            (ngModelChange)="onChange($event)"></nouislider>

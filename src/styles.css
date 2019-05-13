@@ -37,25 +37,21 @@
 .noUi-draggable:before {
   content: '';
   position: absolute;
-  left: calc(50% - 2em);
+  left: calc(50% - 1em);
   top: 2px;
   bottom: 2px;
   width: 10px;
-  background-color: cyan;
-  /*background-color: #909091;*/
+  background-color: #909091;
 }
 
 .noUi-draggable:after {
   content: '';
   position: absolute;
-  left: calc(50% + 2em);
-  /*right: calc(50% - 60px);*/
+  left: calc(50% + 1em);
   top: 2px;
   bottom: 2px;
   width: 10px;
-
-  background-color: red;
-  /*background-color: #909091;*/
+  background-color: #909091;
 }
 
 .noUi-base .noUi-handle {
@@ -78,7 +74,7 @@
   height: 1em;
   width: 1.1em;
   padding: 0;
-  /*margin-left: -4px;*/
+  margin-left: -4px;
   /*margin-top: -4px;*/
   z-index: 2;
 }

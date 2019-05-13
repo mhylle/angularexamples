@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-health-issue-slider',
@@ -11,6 +11,9 @@ export class HealthIssueSliderComponent implements OnInit {
 
   @Input()
   verticalSliders: boolean;
+
+  @Output()
+  valueChanged: EventEmitter<[number, number]> = new EventEmitter<any>();
 
   constructor() {
     this.sliderRange = [40, 60];
@@ -30,8 +33,8 @@ export class HealthIssueSliderComponent implements OnInit {
 
   }
 
-  onChange(value: any) {
-    console.log('Value changed to', value);
+  onChange(value: [number, number]) {
+    this.valueChanged.emit(value);
   }
 
 
