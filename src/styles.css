@@ -36,22 +36,21 @@
 
 .noUi-draggable:before {
   content: '';
+  background-image: url(assets/dragger.png)!important;
+  background-size: 4rem 100%!important;
+  background-repeat: no-repeat!important;
   position: absolute;
   left: calc(50% - 1em);
+  height: 80%;
   top: 2px;
   bottom: 2px;
-  width: 10px;
-  background-color: #909091;
+  width: 4rem;
+  max-width: 4rem;
 }
-
-.noUi-draggable:after {
-  content: '';
-  position: absolute;
-  left: calc(50% + 1em);
-  top: 2px;
-  bottom: 2px;
-  width: 10px;
-  background-color: #909091;
+.noUi-draggable:before img {
+  min-width: 8rem!important;
+  max-width: 8rem!important;
+  overflow: hidden;
 }
 
 .noUi-base .noUi-handle {
