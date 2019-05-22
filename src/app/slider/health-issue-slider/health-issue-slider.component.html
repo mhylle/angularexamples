@@ -1,2 +1,10 @@
-<nouislider [min]="0" [max]="100" [step]="1" [config]="rangeConfig" [(ngModel)]="sliderRange"
-            (ngModelChange)="onChange($event)"></nouislider>
+<div class="slider">
+  <div class="sliderContainer">
+    <div class="sliderEdge sliderStart" (click)="decreaseMin()"></div>
+  </div>
+  <nouislider [min]="0" [max]="100" [step]="1" [config]="rangeConfig" [(ngModel)]="sliderRange"
+              (ngModelChange)="onChange($event)" (mousewheel)="wheelEvent($event)"></nouislider>
+  <div class="sliderContainer">
+    <div class="sliderEdge sliderEnd" (click)="increaseMax()"></div>
+  </div>
+</div>

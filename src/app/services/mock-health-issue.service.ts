@@ -52,6 +52,25 @@ export class MockHealthIssueService {
 
 
     this.his = [hi1, hi2, hi3];
+    for (let i = 0; i < 15; i++) {
+      this.his.push(this.createIssue());
+    }
+  }
+
+  createIssue(): Healthissue {
+    const eoc4: EpisodeOfCare = {
+      name: 'Ortopædkirurgisk overaft. E - AUH',
+      start: 0,
+      end: 12
+    };
+
+    const hi3: Healthissue = {
+      name: 'Hofte- og degenerativ sygdom, hoftedysplai',
+      start: 1,
+      episodeOfCare: [eoc4]
+    };
+
+    return hi3;
   }
 
   public get healthIssues(): Healthissue[] {

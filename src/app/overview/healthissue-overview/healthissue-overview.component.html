@@ -8,12 +8,16 @@
       </div>
     </div>
   </div>
-  <div class="timeline">
-    <lib-slider></lib-slider>
-    <div *ngFor="let hi of healthIssues">
-      <app-healthissue-details [hi]="hi" (click)="toggleEoc()"></app-healthissue-details>
-      <div *ngIf="eocVisible">
-        <app-episodeofcare-details *ngFor="let episode of hi.episodeOfCare" [eoc]="episode"></app-episodeofcare-details>
+  <div class="timeline" >
+    <app-health-issue-slider [lockSliders]="true"></app-health-issue-slider>
+    <!--    <lib-slider></lib-slider>-->
+    <div class="healthIssues">
+      <div *ngFor="let hi of healthIssues">
+        <app-healthissue-details [hi]="hi" (click)="toggleEoc()"></app-healthissue-details>
+        <div *ngIf="eocVisible">
+          <app-episodeofcare-details *ngFor="let episode of hi.episodeOfCare"
+                                     [eoc]="episode"></app-episodeofcare-details>
+        </div>
       </div>
     </div>
 

@@ -18,3 +18,8 @@
   flex: 1;
   height: 100%;
 }
+
+.healthIssues {
+  max-height: 500px;
+  overflow-y: auto;
+}

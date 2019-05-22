@@ -1,12 +1,33 @@
-.noUi-handle {
-  background-color: red;
-  color: red;
-}
-.noUi-connect {
-  background-color: rebeccapurple;
-  color: red;
+.slider {
+  display: flex;
+  align-items: center;
 }
 
-.noUi-touch-area {
-  background-color: aquamarine;
+.sliderContainer {
+  cursor: pointer;
+}
+
+.sliderEdge {
+  height: 0.5em;
+  background-color: #f1f1f1;
+}
+
+.sliderContainer:hover {
+  border: 1px solid red;
+}
+
+.sliderEnd {
+  border-style: solid;
+  border-width: 0.5em 0.25em 0.5em 0.35em;
+  border-color: transparent transparent transparent #424242;
+}
+
+.sliderStart {
+  border-style: solid;
+  border-width: 0.5em 0.35em 0.5em 0.25em;
+  border-color: transparent #424242 transparent transparent;
+}
+
+.slider nouislider {
+  flex: 1;
 }
