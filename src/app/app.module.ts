@@ -14,7 +14,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HealthissueOverviewComponent} from './overview/healthissue-overview/healthissue-overview.component';
 import {HealthissueDetailsComponent} from './overview/healthissue-overview/healthissue-details/healthissue-details.component';
 import {EpisodeofcareDetailsComponent} from './overview/healthissue-overview/episodeofcare-details/episodeofcare-details.component';
-import {SliderModule} from '@cis/slider';
+
 import {ViewerComponent} from './components/viewer/viewer.component';
 
 import {ChildComponent} from './components/child/child.component';
@@ -51,7 +51,6 @@ import { IssueComponent } from './components/dynamic-heights/issue/issue.compone
     NouisliderModule,
     FormsModule,
     ReactiveFormsModule,
-    SliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

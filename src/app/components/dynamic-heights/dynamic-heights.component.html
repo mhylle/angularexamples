@@ -1,8 +1,10 @@
 <div class="container">
   <div class="issueContainer">
-    <div class="issues">
-      <div class="issue" *ngFor="let issue of issues$|async">
-        <app-issue [issue]="issue"></app-issue>
+    <div class="innerContainer">
+      <div class="issues">
+        <div *ngFor="let issue of issues$|async">
+          <app-issue [issue]="issue"></app-issue>
+        </div>
       </div>
     </div>
     <div class="lines"></div>

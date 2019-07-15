@@ -1,29 +1,44 @@
 .container {
-  height: calc(100vh - 3em);
+  position: relative;
+  height: calc(100vh - 1.5em);
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
 .issueContainer {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: calc(100vh - 3em) auto;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #37436e;
+  display: flex;
+  flex-direction: column;
+}
+
+.innerContainer {
+  max-height: 100%;
+  background-color: #6e2362;
 }
 
 .issues {
+  position: relative;
+  background-color: #346e35;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
 .lines {
-  height: 100%;
+  flex: 1;
+  height: calc(100% - 150px - 3em);
   background-color: red;
 }
 
 .footer {
+  position: relative;
+  /*height: 100%;*/
   display: flex;
+  background-color: #6e542c;
 }
 
 .footer > div {
