@@ -1,0 +1,33 @@
+<div *ngFor="let mainModelUI of mainModelUI$|async">
+  <div class="card" *ngIf="mainModelUI.mainModel.children && mainModelUI.mainModel.children.length>0">
+    <div class="header" (click)="toggleContent(mainModelUI)">
+      <div *ngIf="mainModelUI.showContent" class="expander">-</div>
+      <div *ngIf="!mainModelUI.showContent" class="expander">+</div>
+      <div>{{mainModelUI.mainModel.name}}</div>
+    </div>
+    <div class="content" *ngIf="mainModelUI.showContent">
+      <div class="innerCard">
+        <div (click)="toggleChildren(mainModelUI)" class="expanderContainer">
+          <div class="expander" *ngIf="mainModelUI.showChildren">-</div>
+          <div class="expander" *ngIf="!mainModelUI.showChildren">+</div>
+          <div>Children</div>
+        </div>
+        <div *ngIf="mainModelUI.showChildren">
+          <app-child *ngFor="let childModel of mainModelUI.mainModel.children" [childModel]="childModel"
+                     class="children"></app-child>
+        </div>
+      </div>
+      <div class="innerCard">
+        <div (click)="toggleInnerChildren(mainModelUI)" class="expanderContainer">
+          <div class="expander" *ngIf="mainModelUI.showInnerChildren">-</div>
+          <div class="expander" *ngIf="!mainModelUI.showInnerChildren">+</div>
+          <div>Inner Children</div>
+        </div>
+        <div *ngIf="mainModelUI.showInnerChildren">
+          <app-inner-child *ngFor="let innerChildModel of mainModelUI.mainModel.innerChildren"
+                           [innerChildModel]="innerChildModel" class="children"></app-inner-child>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div>
+  [Child] I am a childModel with name: {{childModel.name}}
+  <div class="children" *ngIf="childModel.children && childModel.children.length >0">
+    <div class="header">[Child] As a child model I have these Inner Children:</div>
+    <app-inner-child *ngFor="let innerChild of childModel.children" [innerChildModel]="innerChild"></app-inner-child>
+  </div>
+</div>

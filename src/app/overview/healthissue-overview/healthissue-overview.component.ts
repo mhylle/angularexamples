@@ -9,7 +9,8 @@ import {Healthissue} from '../../model/Healthissue';
 })
 export class HealthissueOverviewComponent implements OnInit {
   healthIssues: Healthissue[];
-  private eocVisible: boolean = true;
+  private eocVisible = true;
+  public ranges: [number, number];
 
   constructor(protected healthIssueService: MockHealthIssueService) {
   }
@@ -20,5 +21,9 @@ export class HealthissueOverviewComponent implements OnInit {
 
   toggleEoc() {
     this.eocVisible = !this.eocVisible;
+  }
+
+  setRanges($event: [number, number]) {
+    this.ranges = $event;
   }
 }

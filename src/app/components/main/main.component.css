@@ -1,0 +1,46 @@
+.card {
+  border: 1px solid lightblue;
+  margin: 1em;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.innerCard {
+  margin: 1em;
+  border: 1px solid lightblue;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  background-color: lightblue;
+}
+
+.content {
+  background-color: white;
+  transition: all 150ms ease-in-out;
+}
+
+.expanderContainer {
+  display: flex;
+  align-items: center;
+}
+
+.expander {
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 1em;
+}
+
+.children {
+  padding: 0 1em;
+  transition: all 150ms ease-in-out;
+}
+
+.innerChildren {
+  padding: 0 1em;
+}
+
+.childContainer {
+  transition: all 150ms ease-in-out;
+}

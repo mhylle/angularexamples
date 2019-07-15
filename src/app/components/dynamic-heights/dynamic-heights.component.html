@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="issueContainer">
+    <div class="issues">
+      <div class="issue" *ngFor="let issue of issues$|async">
+        <app-issue [issue]="issue"></app-issue>
+      </div>
+    </div>
+    <div class="lines"></div>
+  </div>
+  <div class="footer">
+    <div>a</div>
+    <div>b</div>
+    <div>c</div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+.issue {
+  display: flex;
+}
+
+.issue > div {
+  flex: 1;
+}

@@ -9,8 +9,13 @@ export class AppComponent {
   title = 'angularexamples';
 
   values: [number, number];
+  public data: [number, number];
 
   displayValues($event: [number, number]) {
     this.values = $event;
+  }
+
+  showData($event: [number, number]) {
+    this.data = $event;
   }
 }
