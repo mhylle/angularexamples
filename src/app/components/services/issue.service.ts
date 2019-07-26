@@ -11,7 +11,7 @@ export class IssueService {
   constructor() {
     this.userIssues = [];
     for (let i = 0; i < 10; i++) {
-      const issue = {name: `Name${i}`, description: 'Lorem Ipsum'};
+      const issue = {name: `Name${i}`, description: `Lorem Ipsum${i}`};
       this.userIssues.push(issue);
     }
   }

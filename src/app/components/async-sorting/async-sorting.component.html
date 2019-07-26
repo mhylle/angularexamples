@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="header">
+    <div (click)="sort('name')">Name</div>
+    <div (click)="sort('description')">Description</div>
+  </div>
+  <div class="content">
+    <div *ngFor="let issue of issues$|async; let odd = odd; let even = even" class="issue"
+         [ngClass]="{odd: odd, even: even}">
+      <div>{{issue.name}}</div>
+      <div>{{issue.description}}</div>
+    </div>
+  </div>
+</div>

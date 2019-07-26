@@ -24,6 +24,7 @@ import { OuterComponent } from './cssInheritance/outer/outer.component';
 import { InnerComponent } from './cssInheritance/inner/inner.component';
 import { DynamicHeightsComponent } from './components/dynamic-heights/dynamic-heights.component';
 import { IssueComponent } from './components/dynamic-heights/issue/issue.component';
+import { AsyncSortingComponent } from './components/async-sorting/async-sorting.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { IssueComponent } from './components/dynamic-heights/issue/issue.compone
     InnerComponent,
     DynamicHeightsComponent,
     IssueComponent,
+    AsyncSortingComponent,
   ],
   imports: [
     BrowserModule,
