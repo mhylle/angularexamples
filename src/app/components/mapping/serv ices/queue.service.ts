@@ -12,7 +12,7 @@ export class QueueService {
   constructor(private readonly http: HttpClient) {
   }
 
-  get quques(): Observable<QueueModel[]> {
+  get queues(): Observable<QueueModel[]> {
     return this.http.get<QueueModel[]>(`${environment.baseUrl}/queues`);
   }
 }

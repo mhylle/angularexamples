@@ -14,13 +14,13 @@ export class ServerService {
   }
 
   get servers(): Observable<ServerModel[]> {
-    const serverObservable = this.http.get<ServerModel[]>(`${environment.baseUrl}/servers`);
-    return serverObservable.pipe(
-      mergeMap(servers => servers),
-      mergeMap(server => {
-        server.queueModels = this.queueService.quques;
-        return of(server);
-      }), toArray()
-    );
+    return this.http.get<ServerModel[]>(`${environment.baseUrl}/servers`)
+      .pipe(
+        mergeMap(servers => servers),
+        mergeMap(server => {
+          server.queueModels = this.queueService.queues;
+          return of(server);
+        }), toArray()
+      );
   }
 }
