@@ -42,8 +42,9 @@ export class MainComponent implements OnInit {
   }
 
   toggleContent(mainModelUI: MainModelUI) {
-    mainModelUI.showContent= !mainModelUI.showContent;
+    mainModelUI.showContent = !mainModelUI.showContent;
   }
+
   toggleChildren(mainModelUI: MainModelUI) {
     mainModelUI.showChildren = !mainModelUI.showChildren;
   }

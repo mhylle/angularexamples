@@ -21,7 +21,6 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
-    "@cis/slider": "file:../angularcommon/dist/slider/cis-slider-0.5.0.tgz",
     "core-js": "^2.5.4",
     "ng2-nouislider": "^1.8.2",
     "nouislider": "^13.1.5",

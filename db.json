@@ -599,5 +599,37 @@
     "last_name": "Parmeter",
     "email": "gparmeter2r@about.com",
     "gender": "Female"
-  }]
+  }],
+  "servers": [
+    {
+      "id": 1,
+      "url": "localhost:8080"
+    },
+    {
+      "id": 2,
+      "url": "localhost:0808"
+    }
+  ],
+  "queues": [
+    {
+      "sid": 1,
+      "name": "A",
+      "active": true
+    },
+    {
+      "sid": 2,
+      "name": "A",
+      "active": false
+    },
+    {
+      "sid": 1,
+      "name": "B",
+      "active": true
+    },
+    {
+      "sid": 2,
+      "name": "B",
+      "active": true
+    }
+  ]
 }
